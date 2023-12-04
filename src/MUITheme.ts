@@ -9,7 +9,37 @@ const MUITheme = createTheme({
       light: '#ffcb5a',
       contrastText: '#000',
     },
+    common: {
+      black: '#1C1A19',
+    },
   },
+  shadows: [
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+    'none',
+  ],
   components: {
     MuiButton: {
       defaultProps: {
@@ -19,7 +49,7 @@ const MUITheme = createTheme({
         root: ({ ownerState }) => {
           if (ownerState.variant !== 'text') {
             return {
-              borderRadius: 9999,
+              borderRadius: '9999px',
               paddingRight: '80px',
               paddingLeft: '80px',
               boxShadow: 'none',
