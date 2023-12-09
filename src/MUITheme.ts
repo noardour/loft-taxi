@@ -9,6 +9,10 @@ const MUITheme = createTheme({
       light: '#ffcb5a',
       contrastText: '#000',
     },
+    secondary: {
+      main: '#1C1A19',
+      contrastText: '#FFF',
+    },
     common: {
       black: '#1C1A19',
     },
@@ -53,6 +57,10 @@ const MUITheme = createTheme({
               paddingRight: '80px',
               paddingLeft: '80px',
               boxShadow: 'none',
+            };
+          } else {
+            return {
+              fontWeight: '400',
             };
           }
         },
