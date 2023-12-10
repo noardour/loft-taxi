@@ -7,13 +7,12 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import MUITheme from './MUITheme.ts';
-import { RouterProvider } from 'react-router-dom';
-import router from './router.tsx';
+import App from './App.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider theme={MUITheme}>
-      <RouterProvider router={router} />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
 );
