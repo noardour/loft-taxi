@@ -6,7 +6,11 @@ import router from './router';
 const App = () => (
   <div className={styles.app}>
     <Map />
-    <RouterProvider router={router} />
+
+    {/* workaround for map which overlap the map becose of "position: absolute" */}
+    <div className={styles.content}>
+      <RouterProvider router={router} />
+    </div>
   </div>
 );
 
