@@ -23,14 +23,15 @@ const MUITheme = createTheme({
     MuiButton: {
       defaultProps: {
         variant: 'contained',
+        disableElevation: true,
       },
       styleOverrides: {
         root: ({ ownerState }) => {
           if (ownerState.variant !== 'text') {
             return {
               borderRadius: '9999px',
-              paddingRight: '80px',
-              paddingLeft: '80px',
+              padding: '12px 80px',
+              fontSize: '18px',
             };
           } else {
             return {
@@ -43,6 +44,11 @@ const MUITheme = createTheme({
     MuiTextField: {
       defaultProps: {
         variant: 'standard',
+      },
+    },
+    MuiPaper: {
+      defaultProps: {
+        elevation: 6,
       },
     },
   },
