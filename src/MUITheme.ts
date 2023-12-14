@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import { createTheme, TextField } from '@mui/material';
 
 const MUITheme = createTheme({
   palette: {
@@ -56,7 +56,6 @@ const MUITheme = createTheme({
               borderRadius: '9999px',
               paddingRight: '80px',
               paddingLeft: '80px',
-              boxShadow: 'none',
             };
           } else {
             return {
@@ -64,6 +63,11 @@ const MUITheme = createTheme({
             };
           }
         },
+      },
+    },
+    MuiTextField: {
+      defaultProps: {
+        variant: 'standard',
       },
     },
   },
