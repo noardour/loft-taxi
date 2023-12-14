@@ -9,10 +9,10 @@ const Login = () => (
     <FormControl component={Form} method="post" action="/login" sx={{ mb: '33px' }}>
       <TextField label="Email" placeholder="mail@mail.com" sx={{ mb: '8px' }} />
       <TextField label="Пароль" placeholder="введите пароль" />
-      <Typography sx={{ alignSelf: 'flex-end', mb: '46px' }}>Забыли пароль?</Typography>
+      <Typography sx={{ alignSelf: 'flex-end', mb: '46px', color: 'secondary.light' }}>Забыли пароль?</Typography>
       <Button>Войти</Button>
     </FormControl>
-    <Typography alignSelf="center">
+    <Typography alignSelf="center" color="secondary.light">
       Новый пользователь?
       <MUILink component={Link} to="/register">
         Регистрация

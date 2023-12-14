@@ -1,14 +1,13 @@
 import { Box, Paper } from '@mui/material';
 import VerticalLogo from '../components/VerticalLogo';
-import styles from './RootAuth.module.css';
 import { Outlet } from 'react-router-dom';
 
 const RootAuth = () => (
-  <div className={styles.wrapper}>
-    <div className={styles.sidebar}>
+  <Box sx={{ poslition: 'relative', display: 'flex', height: '100%' }}>
+    <Box sx={{ height: '100%', width: '485px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'secondary.main' }}>
       <VerticalLogo />
-    </div>
-    <div className={styles.content}>
+    </Box>
+    <Box sx={{ flex: '1 0 auto', height: '100%' }}>
       <Box sx={{ height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <Paper sx={{ p: 10, width: '580px' }}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -16,8 +15,8 @@ const RootAuth = () => (
           </Box>
         </Paper>
       </Box>
-    </div>
-  </div>
+    </Box>
+  </Box>
 );
 
 export default RootAuth;
