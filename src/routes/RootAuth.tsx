@@ -1,3 +1,4 @@
+import { Box, Paper } from '@mui/material';
 import VerticalLogo from '../components/VerticalLogo';
 import styles from './RootAuth.module.css';
 import { Outlet } from 'react-router-dom';
@@ -8,7 +9,13 @@ const RootAuth = () => (
       <VerticalLogo />
     </div>
     <div className={styles.content}>
-      <Outlet />
+      <Box sx={{ height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Paper sx={{ p: 10, width: '580px' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Outlet />
+          </Box>
+        </Paper>
+      </Box>
     </div>
   </div>
 );
