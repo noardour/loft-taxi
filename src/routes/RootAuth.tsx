@@ -9,7 +9,7 @@ const RootAuth = () => (
     </Box>
     <Box sx={{ flex: '1 0 auto', height: '100%' }}>
       <Box sx={{ height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <Paper sx={{ p: 10, width: '580px' }}>
+        <Paper sx={{ p: 10, width: '580px' }} elevation={6}>
           <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <Outlet />
           </Box>
