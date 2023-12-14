@@ -1,4 +1,4 @@
-import { createTheme, TextField } from '@mui/material';
+import { createTheme } from '@mui/material';
 
 const MUITheme = createTheme({
   palette: {
