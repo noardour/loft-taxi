@@ -1,7 +1,11 @@
-import styles from './Logo.module.css';
 import logo from '../assets/logo.svg';
 import { FC } from 'react';
+import { Box, BoxProps } from '@mui/material';
 
-const Logo: FC = () => <img className={styles.logo} src={logo} alt="logo" data-testid="logo" />;
+interface LogoProps extends BoxProps {}
+
+const Logo: FC<LogoProps> = ({ sx, ...props }) => (
+  <Box component="img" sx={{ width: '270px', height: '61px', ...sx }} src={logo} alt="logo" data-testid="logo" {...props} />
+);
 
 export default Logo;

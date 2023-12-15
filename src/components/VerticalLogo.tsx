@@ -1,7 +1,11 @@
-import styles from './VerticalLogo.module.css';
 import verticalLogo from '../assets/vertical-logo.svg';
 import { FC } from 'react';
+import { Box, BoxProps } from '@mui/material';
 
-const VerticalLogo: FC = () => <img src={verticalLogo} alt="logo" className={styles.verticalLogo} />;
+interface VerticalLogoProps extends BoxProps {}
+
+const VerticalLogo: FC<VerticalLogoProps> = ({ sx, ...props }) => (
+  <Box component="img" src={verticalLogo} alt="logo" sx={{ width: '192px', height: '228px', ...sx }} {...props} />
+);
 
 export default VerticalLogo;
