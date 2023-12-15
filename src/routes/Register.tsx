@@ -1,7 +1,8 @@
 import { Button, FormControl, Link as MUILink, TextField, Typography } from '@mui/material';
+import { FC } from 'react';
 import { Form, Link } from 'react-router-dom';
 
-const Register = () => (
+const Register: FC = () => (
   <>
     <Typography variant="h4" sx={{ alignSelf: 'center', fontWeight: 'bold', mb: '57px' }}>
       Регистрация

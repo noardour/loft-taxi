@@ -1,3 +1,5 @@
-const Profile = () => <div>Propfile</div>;
+import { FC } from 'react';
+
+const Profile: FC = () => <div>Propfile</div>;
 
 export default Profile;

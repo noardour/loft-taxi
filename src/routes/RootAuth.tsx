@@ -1,8 +1,9 @@
 import { Box, Paper } from '@mui/material';
 import VerticalLogo from '../components/VerticalLogo';
 import { Outlet } from 'react-router-dom';
+import { FC } from 'react';
 
-const RootAuth = () => (
+const RootAuth: FC = () => (
   <Box sx={{ poslition: 'relative', display: 'flex', height: '100%' }}>
     <Box sx={{ height: '100%', width: '485px', display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'secondary.main' }}>
       <VerticalLogo />

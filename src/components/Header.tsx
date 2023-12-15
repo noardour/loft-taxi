@@ -1,9 +1,12 @@
-import { AppBar, Button, Toolbar, Box, FormControl } from '@mui/material';
+import { AppBar, Button, Toolbar, Box, FormControl, AppBarProps } from '@mui/material';
 import Logo from './Logo';
 import { Form, Link } from 'react-router-dom';
+import { FC } from 'react';
 
-const Header = () => (
-  <AppBar position="static" color="secondary" sx={{ paddingTop: '21px', paddingBottom: '21px' }} elevation={0}>
+interface HeaderProps extends AppBarProps {}
+
+const Header: FC<HeaderProps> = ({ sx, ...props }) => (
+  <AppBar position="static" color="secondary" sx={{ paddingTop: '21px', paddingBottom: '21px', ...sx }} elevation={0} {...props}>
     <Toolbar sx={{ gap: '20px' }}>
       <Box sx={{ flex: 1 }}>
         <Logo />
