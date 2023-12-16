@@ -50,6 +50,21 @@ const MUITheme = createTheme({
       defaultProps: {
         elevation: 6,
       },
+      styleOverrides: {
+        root: {
+          borderRadius: '10px',
+        },
+      },
+    },
+    MuiAppBar: {
+      defaultProps: {
+        elevation: 0,
+      },
+      styleOverrides: {
+        root: {
+          borderRadius: '0px',
+        },
+      },
     },
   },
 });
