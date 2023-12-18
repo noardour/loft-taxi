@@ -5,14 +5,14 @@ import TaxiTariffs from './TaxiTariffs';
 
 describe('TaxiTariffs', () => {
   it('renders without errors', () => {
-    render(<TaxiTariffs />);
+    render(<TaxiTariffs name="test" />);
 
     expect(screen.getAllByTestId('taxi-tariff').length).toEqual(3);
   });
 
   it('select elements', async () => {
     const onChange = vi.fn();
-    render(<TaxiTariffs onChange={onChange} />);
+    render(<TaxiTariffs name="test" onChange={onChange} />);
 
     const taxiTariffsElements = await screen.findAllByTestId('taxi-tariff');
     await userEvent.click(taxiTariffsElements[1]);
