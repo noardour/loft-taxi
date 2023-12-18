@@ -3,7 +3,7 @@ import Root from './routes/Root';
 import RootAuth from './routes/RootAuth';
 import Login from './routes/Login';
 import Register from './routes/Register';
-import Order from './routes/Order';
+import Order, { action as orderAction } from './routes/Order';
 import Profile from './routes/Profile';
 import { action as logoutAction } from './routes/logout';
 
@@ -14,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
+        action: orderAction,
         element: <Order />,
       },
       {
