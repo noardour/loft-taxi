@@ -4,7 +4,7 @@ import RootAuth from './routes/RootAuth';
 import Login, { action as loginAction } from './routes/Login';
 import Register, { action as registerAction } from './routes/Register';
 import Order, { action as orderAction } from './routes/Order';
-import Profile from './routes/Profile';
+import Profile, { action as profileAction } from './routes/Profile';
 import { action as logoutAction } from './routes/logout';
 
 const router = createBrowserRouter([
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'profile',
+        action: profileAction,
         element: <Profile />,
       },
       {
