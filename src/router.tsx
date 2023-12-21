@@ -6,25 +6,32 @@ import Register, { action as registerAction } from './routes/Register';
 import Order, { action as orderAction } from './routes/Order';
 import Profile, { action as profileAction } from './routes/Profile';
 import { action as logoutAction } from './routes/logout';
+import ErrorPage from './routes/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
-        action: orderAction,
-        element: <Order />,
-      },
-      {
-        path: 'profile',
-        action: profileAction,
-        element: <Profile />,
-      },
-      {
-        path: '/logout',
-        action: logoutAction,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            index: true,
+            action: orderAction,
+            element: <Order />,
+          },
+          {
+            path: 'profile',
+            action: profileAction,
+            element: <Profile />,
+          },
+          {
+            path: 'logout',
+            action: logoutAction,
+          },
+        ],
       },
     ],
   },
